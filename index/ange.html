@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Header Section</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		/* Customize the style of the navigation menu */
+		.navbar-nav {
+			margin-left: auto;
+		}
+		.nav-link {
+			color: white;
+			font-weight: bold;
+			margin-left: 20px;
+		}
+		.nav-link:hover {
+			color: #ffcc00;
+		}
+
+        #banner {
+  padding: 100px 0;
+  background-color: azure;
+}
+
+#banner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#banner p {
+  font-size: 24px;
+  margin-bottom: 30px;
+ 
+}
+
+#reservation-form {
+  padding: 50px 0;
+}
+
+#reservation-form h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#reservation-form form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#reservation-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#reservation-form input,
+#reservation-form select {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-form button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#reservation-form button:hover {
+  background-color: #0069d9;
+}
+.small-image{
+    width: 50px;
+    border-radius: 50%;
+}
+.thick-green-border {
+    border-color: green;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+  .yo{
+    border-radius: 30%;
+  }
+  
+  .footer {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #666;
+}
+
+.footer .list-inline li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer .list-inline li:last-child {
+  margin-right: 0;
+}
+
+	</style>
+</head>
+<body>
+
+	<!-- Create the header section with navigation menu and logo -->
+	<header>
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<!-- Add the logo to the left side of the navigation menu -->
+			<a class="navbar-brand" href="#"><img src="jonathan-borba-LR5O79shvro-unsplash.jpg" class="thick-green-border small-image" alt="Logo"></a>
+
+			<!-- Add the links to different pages on the website to the navigation menu -->
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#banner">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#reservation-form">Products</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+    <section id="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>Book Your Bus Tickets Online</h1>
+              <p>Experience the convenience of our online reservation system and get special discounts on your bookings.</p>
+              <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+            <div class="col-md-6">
+              <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" class="yo" alt="Banner Image">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="reservation-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Find Your Bus Route</h2>
+              <form>
+                <div class="form-group">
+                  <label for="departure-location">Departure Location</label>
+                  <input type="text" class="form-control" id="departure-location" placeholder="Enter Departure Location">
+                </div>
+                <div class="form-group">
+                  <label for="arrival-location">Arrival Location</label>
+                  <input type="text" class="form-control" id="arrival-location" placeholder="Enter Arrival Location">
+                </div>
+                <div class="form-group">
+                  <label for="date-of-travel">Date of Travel</label>
+                  <input type="date" class="form-control" id="date-of-travel">
+                </div>
+                <div class="form-group">
+                  <label for="passengers">Number of Passengers</label>
+                  <input type="number" class="form-control" id="passengers" min="1" max="10">
+                </div>
+                <div class="form-group">
+                  <label for="seating-arrangement">Seating Arrangement Preference</label>
+                  <select class="form-control" id="seating-arrangement">
+                    <option value="window">Window</option>
+                    <option value="aisle">Aisle</option>
+                    <option value="middle">Middle</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="payment-option">Payment Option</label>
+                  <select class="form-control" id="payment-option">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>About Our Company</h2>
+              <p>We are a leading bus transportation company committed to providing safe, reliable, and affordable travel options to our customers. Our mission is to make travel easy and accessible for everyone, and we strive to achieve this by offering a wide range of routes, schedules, and seating options to meet the needs of our diverse customer base.</p>
+              <p>Our vision is to become the preferred choice for bus travel in the region, and we are constantly working to improve our services and expand our reach to new destinations. We value our customers and are committed to providing exceptional customer service, ensuring that every journey with us is a comfortable and enjoyable experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Contact Us</h2>
+              <p>If you have any questions or concerns about our services, please don't hesitate to get in touch with us. You can reach us by phone, email, or by filling out the contact form below.</p>
+              <ul class="list-unstyled">
+                <li><i class="fa fa-phone"></i> +237-650-17-82-47</li>
+                <li><i class="fa fa-envelope"></i> yopatatchou@gmail.com</li>
+                <li><i class="fa fa-map-marker"></i> Bambili Street, Cameroon</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Important Links</h4>
+              <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Social Media</h4>
+              <ul>
+                <li><a href="https://free.facebook.com?subno_key=AaHcgS00A5wSQQsmO0FQDGHd6fkqlO0igCdR3G7Sl_GQV55gPHeABqMUklsWJGvtZZ2tqOoSQeid2VjuYZ73r51Mu4ElgRkYeDA9P4MlL-smXEw7Uc8wquPmrvKl8Bzae93f6cZXn1dw1OJk_rp2rs7Z1N0kUg7cO1WPCJxvRVUc7hKg_Z3qu8UhAEYloMCBYHuSGA78L2koo6BIlqaVoM4zMQgEo2SLHUF4eZoS0lKn0phFsFpWe2hjIAKLVdpp6P7-AmA78FLwa3_mLq_7z35KRh521wFMZ43ldeBGlSJIR2DSZZpXoZ7qn2tJ1mvY6vI&hrc=1&refsrc=deprecated&_rdr">Facebook</a></li>
+                <li><a href="https://twitter.com/nellyyopa">Twitter</a></li>
+                <li><a href="https://instagram.com/yopanelly?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/yopa-nelly-89b78025b">LinkedIn</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Partnerships</h4>
+              <ul>
+                <li><a href="#">Partner 1</a></li>
+                <li><a href="#">Partner 2</a></li>
+                <li><a href="#">Partner 3</a></li>
+                <li><a href="#">Partner 4</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-inline">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>
